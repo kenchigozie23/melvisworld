@@ -1,19 +1,13 @@
-'use client'
+
 import React from "react";
-import { CiMail } from "react-icons/ci";
-import { CiLocationOn } from "react-icons/ci";
 import { BsPerson } from "react-icons/bs";
 import Image from "next/image";
 import melvislogo from "../public/melvis world logo.png";
 import Link from "next/link";
-import { useState, useEffect } from 'react'
-import DropdownButton from '../components/DropDownMenuButton';
-import DropdownMenu from "../components/DropDownMenu"
+
 
 import Example from '../components/dropdown'
-// import { Menu, Transition } from '@headlessui/react'
-// import { Fragment, useEffect, useRef, useState } from 'react'
-// import { ChevronDownIcon } from '@heroicons/react/20/solid'
+
 function Secondnav() {
 
 
@@ -22,7 +16,7 @@ function Secondnav() {
     
     <main className="w-full fixed hidden md:flex justify-between items-center px-20  py-12 top-0 left-0 z-20">
       <article className="flex justify-between items-center">
-        <div className="">
+        <div>
           <Image
             className="pr-20"
             src={melvislogo}
