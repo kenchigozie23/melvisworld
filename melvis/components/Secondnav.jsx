@@ -5,8 +5,8 @@ import Image from "next/image";
 import melvislogo from "../public/melvis world logo.png";
 import Link from "next/link";
 
-
-import Example from '../components/dropdown'
+import  StaggeredDropDown from "../components/dropdown"
+// import Example from '../components/dropdown'
 
 function Secondnav() {
 
@@ -31,9 +31,9 @@ function Secondnav() {
           <Link href="/">Contact</Link>
       
 
-          <div className="flex justify-center items-center ">
-      <Example/>
-    </div>
+          <span className="flex">
+      < StaggeredDropDown/>
+    </span>
           
           <div>
       
@@ -47,11 +47,11 @@ function Secondnav() {
           <div className="px-2">
             <BsPerson />
           </div>
-          <p className="pr-3 text-sm">Login</p>
+          <p className="pr-3 text-sm">Sign up</p>
         </div>
         <div>
           <button className="text-sm bg-black text-white border-solid py-2 px-6 font-semibold">
-            Contact Us
+            Contact
           </button>
         </div>
       </article>
