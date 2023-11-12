@@ -7,20 +7,26 @@ import {
     FiPlusSquare,
   } from "react-icons/fi";
   import { motion } from "framer-motion";
-  import { Dispatch, SetStateAction, useState } from "react";
+  import { Dispatch, SetStateAction, useState, useEffect } from "react";
   import { IconType } from "react-icons";
   
   const StaggeredDropDown = () => {
     const [open, setOpen] = useState(false);
+    useEffect(() => {
+        const handleClickOutside = () => setOpen(false)
+        document.addEventListener('click', handleClickOutside)
+        return () => document.removeEventListener('click', handleClickOutside)
+      }, [])
   
     return (
       <div className="p-8  flex items-center justify-center bg-white">
         <motion.div animate={open ? "open" : "closed"} className="relative">
           <button
-            onClick={() => setOpen((pv) => !pv)}
-            className="flex items-center gap-2 px-3 py-2 rounded-md text-indigo-50 bg-indigo-500 hover:bg-indigo-500 transition-colors"
+          onMouseEnter={() => setOpen(true)} 
+          onClick={(e) => e.stopPropagation()} 
+            className="flex items-center gap-2 px-3 py-2 rounded-md text-black bg-white  transition-colors"
           >
-            <span className="font-medium text-sm">Post actions</span>
+            <span className="font-medium text-sm">Categories</span>
             <motion.span variants={iconVariants}>
               <FiChevronDown />
             </motion.span>
