@@ -8,7 +8,7 @@ import { BsPerson} from "react-icons/bs";
 const Firstnav = () => {
   return (
  
-    <main className='w-full fixed hidden md:flex justify-between items-center px-20 mx-auto border border-b-1 border-t-0 border-l-0 border-gray-300 border-r-0'>
+    <main className='w-full fixed hidden md:flex justify-between items-center px-32 mx-auto border border-b-1 border-t-0 border-l-0 border-gray-300 border-r-0'>
         <article className='flex justify-between items-center'>
             <div className='flex justify-between items-center'>
                 <div className='px-2'>

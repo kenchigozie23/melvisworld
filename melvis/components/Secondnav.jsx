@@ -15,7 +15,7 @@ function Secondnav() {
   
   return (
     
-    <main className="w-full fixed hidden md:flex justify-between items-center px-20  py-7 top-0 left-0 z-20">
+    <main className="w-full fixed hidden md:flex justify-between items-center px-32  py-7 top-0 left-0 z-20">
       <article className="flex justify-between items-center">
         <div>
           <Image
@@ -47,23 +47,22 @@ function Secondnav() {
       
 
 
-    <div className="pt-2 relative mx-auto text-gray-600">
+      <div className="hidden md:block">
+            {/* Search input */}
+            <div className="flex rounded-md shadow-sm">
+              <input 
+                type="text"
+                className=" bg-gray-100  bg-transparent border-none border-gray-300 h-9 px-3 pr-0 rounded-none text-sm focus:outline-none placeholder:text-black" 
+                placeholder="Search..."
+              />
+              <button className="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 border-l-2 border border-gray-300 text-sm font-medium rounded-r-md text-gray-700 bg-gray-100 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 border-r-0 border-t-0 border-b-0">
+                <BsSearch className="h-5 w-5 text-black" aria-hidden="true" />
+                
+              </button>
+            </div>
+          </div>        
 
-      <input 
-        className="border-2 border-gray-300 bg-gray-300 h-10 px-5 pr-10 rounded-none text-sm focus:outline-none"
-        type="text" 
-        name="search" 
-        placeholder="Search" 
-      />
-
-      <button
-        type="submit"
-        className="absolute right-5 top-0 mt-5 mr-4"
-      >
-        <BsSearch className="text-gray-600 h-4 w-4" />
-      </button>
-
-    </div>
+    
   
       </article>
     </main>
